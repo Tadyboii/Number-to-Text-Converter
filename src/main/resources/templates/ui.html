@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<h1>Number to Text Converter</h1>
+<div>
+    <form th:object="${inputForm}" th:action="@{/converter}" method="post">
+        Input number: <input type="text" th:field="*{number}"/><br/>
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+<div>Result:</div>
+<div th:text="${result}"></div>
+</body>
+</html>
