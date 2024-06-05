@@ -13,7 +13,7 @@
 <h1>Number to Text Converter</h1>
 <div>
     <form th:object="${inputForm}" th:action="@{/converter}" method="post">
-        Input number: <input type="text" th:field="*{number}"/><br/>
+        Input number: <input type="text" th:field="*{number}" th:value="*{number}"/><br/>
         <button type="submit">Submit</button>
     </form>
 </div>
